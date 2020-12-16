@@ -16,7 +16,7 @@
 * **Lieu** : sur Zoom aussi.
 * **Support** : - à venir -
 
-### Mardi 19 janvier 2021 de 09h30 à 11 heures : datavisualisation et communication avec les habitant·es
+### Mercredi 3 février 2021 de 10h30 à 12 heures : datavisualisation et communication avec les habitant·es
 * **Intervenant** : encore [Sylvain Lapoix (Datactivist)](http://twitter.com/sylvainlapoix) !
 * **Lieu** : sur Gather.town cette fois-ci (instance en cours de construction) / en parallèle du hackathon [Hack your city](http://www.futurocite.be/hack-your-city/) ;
 * **Support** : - à venir -
