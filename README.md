@@ -5,7 +5,7 @@
 
 ## Webinaires : saison 2
 
-### Mardi 12 janvier 2021 de 09h30 à 11 heures :<br>*documentater et améliorer la qualité des données*
+### Mardi 12 janvier 2021 de 09h30 à 11 heures :<br>*documenter et améliorer la qualité des données*
 * **Intervenant** : [Sylvain Lapoix (Datactivist)](http://twitter.com/sylvainlapoix)
 * **Lieu** : sur Zoom (lien à venir).
 * **Support** : à venir aussi !
