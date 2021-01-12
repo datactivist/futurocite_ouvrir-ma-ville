@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Documenter et améliorer la qualité des données</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sylvain Lapoix, Datactivist" />
+    <meta name="date" content="2021-12-01" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Documenter et améliorer la qualité<br>des données
+## Webinaire ‘Ouvrir ma ville’ saison 2
+### Sylvain Lapoix, Datactivist
+### 12/01/2021
+
+---
+
+
+layout: true
+  
+
+&lt;div class='my-footer'&gt;&lt;span&gt;Webinaire Ouvrir ma ville - Qualité des données&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt; 
+
+
+&lt;style type="text/css"&gt;
+
+
+.yellow-h{
+   background: #ffff88;
+}
+
+.blue-h{
+   background: #83c7fc;
+}
+
+&lt;/style&gt;
+
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : http://datactivist.coop/qualite_donnees
+
+Sources : https://github.com/datactivist/qualite_donnees
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+&lt;BR&gt;
+&lt;BR&gt;
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+
+background-image: url("https://media.giphy.com/media/1gR4aiU6sU89sS7ddI/giphy.gif")
+class: center, top, inverse
+
+# Introduction
+
+## créons ensemble un petit jeu de données pour voir
+
+---
+
+### Un formulaire tout simple
+
+Je vous demande de remplir [un bref formulaire de contact](https://forms.gle/bxcerXq2MT9aJXC2A) afin de constituer un petit jeu de données sur les participant·es à ce webinaire (les données seront bien entendu supprimées à l'issue de l'exercice).
+
+.center[
+![](./img/formulaire_exercice_intro.png)
+]
+
+---
+
+### Quels usages pourrions-nous faire de ces données si elles étaient publiées en open data ?
+
+--
+
+Quelques propositions :
+* un calculateur de trajet pour les services publics ;
+* une rapide étude statistique sur l'ancienneté professionnelle ;
+* un annuaire d'agents publics de Wallonie ;
+
+--
+
+Mais qu'est-ce qui nous gênerait dans la forme des données proposées ?
+D'où viennent ces problèmes ?
+
+---
+
+### Quelques constats
+
+
+
+1. l'outil de collecte de données influe sur la forme des données en sortie ;
+
+--
+
+2. la praticité du jeu de données varie selon l'usage qu'on souhaite en faire ;
+
+--
+
+3. le recours à des formats standardisés assure un usage facilité des données.
+
+--
+
+#### Bref, nous voilà au coeur de la question de .red[la qualité des données] !
+
+---
+
+background-image: url("https://media.giphy.com/media/l0HlG9v9KeDXsHC2A/giphy.gif")
+class: center, top, inverse
+
+# 1. Evaluer la *"qualité"*
+
+---
+
+background-image: url("https://media.giphy.com/media/3o7buh0sx5p7qrnJ5u/giphy.gif")
+class: center, top, inverse
+
+
+### Selon vous, qu'est-ce qu'une&lt;br&gt;"*donnée sale*" ?
+
+---
+
+### Une donnée "sale"
+
+Que ce soit pour des raisons techniques ou organisationnelles, il arrive que les données fournies 
+soient jugées "sales". Une donnée est jugée sale quand son format gêne son utilisation, que ce soit par un humain ou par une machine.
+
+Plusieurs dimensions d'une base de données peuvent contribuer à sa saleté :
+* une source manquante, défectueuse, imprécise ;
+* des têtières incompréhensibles, redondantes, incomplètes ;
+* des données imbriquées, mal formatées, lacunaires, excédentaires ;
+* des colonnes mal agencées, des lignes incohérentes, une mauvaise architecture...
+
+---
+
+
+### Une "donnée propre" ?
+
+Une "donnée propre" est une donnée qui répond à quelques critères qui assure sa lisibilité et son usage sans déperdition de sens. Pour en rester aux critères principaux :
+* une donnée est propre quand elle est reconnue par la machine pour ce qu'elle est ;
+* une donnée est propre quand elle est lisible par l'utilisateur·rice ;
+* une donnée est propre quand elle permet de faire les calculs nécessaires.
+
+--
+
+Autrement dit : **une donnée propre est souvent une donnée transformée par rapport à sa source suivant des besoins précis**.
+
+---
+
+### Pourquoi nettoyer ses données ?
+
+.pull-left[Le *"travail de balayeur"* que s'avère être le nettoyage n'est pas une petite tâche : [d'après des entretiens menés par le New York Times en 2014](https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html), il engouffre 50 à 80% du temps de travail des data scientists.
+
+
+En tant que producteur·rices de données, **vous serez généralement tenu·es pour responsables de la publication de données sales**.]
+
+.pull-right[
+![](./img/nyt_janitorwork.png)
+]
+
+
+---
+
+
+background-image: url("https://media.giphy.com/media/7SX1EWzetp0GVAgoqp/giphy.gif")
+class: center, top
+
+
+### Et alors, en quoi ça me concerne ?
+
+---
+
+### 1ère bonne raison : créer des usages
+
+.pull-left[Des jeux de données de bonne qualité facilitent et encouragent la réutilisation :
+1. création de nouveaux services par votre administration ou d'autres ;
+2. réutilisation par le tissu associatif ou bénévole de votre collectivité ;
+3. développement de services par des start-ups et création d'emploi et de valeur.
+
+Mieux préparées, vos données contribuent à l'information et à l'activité sur votre territoire avec des bénéfices sociaux et économiques nombreux.
+]
+
+--
+
+.pull-right[#### Ex. : du menu des cantines à QuiDitMiam
+
+Lancée en s'appuyant sur les menus des cantines ouverts à Toulouse, l'application QuiDitMiam propose un accès aux menus des restaurations collectives en y ajoutant une couche d'information sur les allergènes, label, etc.
+
+Voir leur fiche réutilisation sur [data.gouv.fr](https://www.data.gouv.fr/en/reuses/quiditmiam/).
+
+![](./img/quiditmiam.png)
+]
+
+---
+
+### 2ème bonne raison : moins de SAV
+
+.pull-left[Que ce soit le temps de réponse aux administré·es pour résoudre des soucis ou les bugs dans la production interne à l'administration, standardiser ses données est plus efficace que compenser les insuffisances des jeux de données au départ.
+
+[Comme l'a constaté l'équipe de la ville d'Issy-les-Moulineaux](https://medium.com/datactivist/construire-des-tableaux-de-bord-dynamiques-au-service-de-lopen-data-et-de-la-collectivit%C3%A9-ec514020c027) (région parisienne) avant d'opter pour un schéma de qualité de données :
+
+]
+
+.pull-right[
+
+*"Problème : ces tableaux et rapports sont dans des structurations et des formats différents selon les services. Chaque année, les indicateurs sont à recalculer, les données doivent alimenter d’autres tableaux, et donc le travail de mise à jour prend du temps."*
+
+
+![](./img/standardisation_issy.png)
+
+]
+
+---
+
+### 3ème bonne raison : la transparence
+
+.pull-left[
+Les données locales constituent un enjeu de transparence à de nombreux niveaux : responsabilité, transparence démocratique, lutte contre la corruption ... La Banque Mondiale et l'OCDE promeuvent la transparence des données locales tandis que le Royaume-Uni a édicté en 2015 un socle minimum d'open data au nom de la transparence démocratique, le *Local government transparency code*.
+
+L'exigence de qualité de donnée rejoint ici une exigence démocratique.]
+
+.pull-right[![](./img/lgt_uk.png)
+
+&gt; *"This document sets out the minimum data that local authorities should be publishing, the frequency it should be published and how it should be published.*
+]
+
+
+---
+
+### Le nouvel enjeu du machine learning
+
+.pull-left[
+![](./img/hbr_machinelearning.png)
+]
+
+.pull-right[Visant à l'automatisation et à l'optimisation, les outils de machine learning digèrent de manière silencieuse les erreurs et données mal formattées. Pire : leur apprentissage reposant sur l'inférence sur la base des données disponibles, les insuffisances des données de base se trouvent amplifiées, répliquées et intégrées à leurs arbitrages.
+
+L'occasion de rappeler une hiérarchie trop souvent oubliée : *"si vos données sont mauvaises, vos outils de machine learning ne servent à rien !"*.
+
+Source : Thomas C. Redman, [HBR](https://hbr.org/2018/04/if-your-data-is-bad-your-machine-learning-tools-are-useless), 2018.
+]
+
+---
+
+background-image: url("https://media.giphy.com/media/9x6fPJVGpq9HO/giphy.gif")
+class: center, top, inverse
+
+
+# 2. Standardiser
+## pour faciliter la réutilisation
+
+---
+
+
+background-image: url("https://media.giphy.com/media/3o72F5xIDp76AZifBe/giphy.gif")
+class: center, top, inverse
+
+
+## Base de standardisation
+
+
+---
+
+### A la recherche des critères
+
+De nombreux travaux ont tenté d'objectiver la notion de **qualité**. Parmi les plus éclairants, on peut signaler les travaux de Toronto Open Data et du [*"open data quality group"*](https://docs.google.com/presentation/d/1yFaPN_aL4D8h__3kTQ9GAc970nkroQaY/) qui a tenté de standardiser une série de critères [intégrés à sa plateforme](https://medium.com/open-data-toronto/towards-a-data-quality-score-in-open-data-part-1-525e59f729e9).
+
+![](./img/toronto_criteria.png)
+
+
+---
+
+### A la recherche d'une méthode
+
+.pull-left[#### [Organizing data in spreadsheets](http://kbroman.org/dataorg/) - K. Broman
+
+![](./img/broman_spreadsheet.png)
+
+]
+
+.pull-right[#### Les [72 règles](https://checklists.opquast.com/fr/assurance-qualite-web/download/) d'Opquast
+![](./img/opquast_checklist.png)
+]
+
+---
+
+background-image: url("https://media.giphy.com/media/3ohhwidvE9BjiKOnXa/giphy.gif")
+class: center, top, inverse
+
+### Mot clef : l'interopérabilité
+
+.footnote[Une source de référence : [Recommandations pour favoriser l'interopérabilité des données open data](https://docs.google.com/document/d/1rcv5hPVm372yZH9WbhRin4wsEBqiDJ4PG7LO6OmINhI/edit#heading=h.o0t9u2ur9hmk), OpenDataFrance, 2018.]
+
+
+---
+
+### Les normes ISO
+
+.pull-left[Les normes ISO constituent un outil puissant d'interopérabilité des données : référencées au niveau international, elles assurent la lisibilité par la plupart des outils et peuvent être intégrés à la documentation des jeux de données.
+
+Si leur couverture n'est pas intégrale, elles permettent d'assurer une cohérence et la qualité de bons nombres de types de données courants :
+* monnaie ;
+* nom des pays ;
+* nom des langues ;
+* etc.
+]
+
+--
+
+.pull-right[#### Exemple de l'enfer : les dates (illustration : [xkcd](https://xkcd.com/1179/))
+
+![](./img/xkcd_dates.png)
+
+]
+
+---
+
+
+background-image: url("https://media.giphy.com/media/3orif2JK8DsUSxMShW/giphy.gif")
+class: center, top, inverse
+
+### Des licences lisibles
+
+---
+
+### Utiliser des outils de validation
+
+l'évaluation de la qualité des données nécessite également une perspective globale : données manquantes, distribution aberrante, variables mal renseignées ... n'apparaissent qu'avec un peu de recul.
+
+[WTF CSV](https://www.databasic.io/en/wtfcsv/) (*pardon my English*) permet par exemple de produire un rapport bref et visuel sur les différentes variables, valeurs manquantes et autres critères sur la base d'un CSV uploadé sur le site.
+
+![](./img/wtf_csv.png)
+
+---
+
+## Standards en usage
+
+---
+
+### Success story : le [GTFS](https://developers.google.com/transit) de Google
+
+![](./img/gtfs.png)
+
+---
+
+### [DAE](https://schema.data.gouv.fr/arsante/schema-dae/latest.html) : un format qui sauve des vies !
+
+.center[
+![](./img/schema_dae.png)
+]
+---
+
+### Une foule de bonnes pratiques nationales !
+
+Exemple : [schema.data.gouv.fr](https://schema.data.gouv.fr/).
+
+![](./img/schema_dgf.png)
+
+---
+
+### Des registres de bonnes pratiques nationales
+
+Exemple : [Open Data Standards directory](https://www.europeandataportal.eu/en/news/open-data-standards-directory) (registre européen).
+
+![](./img/opendatastandards_directory.png)
+
+---
+
+background-image: url("https://media.giphy.com/media/AUMxbiDIzBOiFGA71r/giphy.gif")
+class: center, top, inverse
+
+# 3. Documenter
+## pour assurer la compréhension
+
+---
+
+### Un manque criant ...
+
+La documentation est souvent le parent pauvre de la publication de données : imprécise, elle décourage l'usage ou produit des incompréhensions.
+
+![](./img/bothorel_doc.png)
+
+Source : [Rapport Bothorel, 2020](https://www.gouvernement.fr/remise-du-rapport-sur-la-politique-publique-de-la-donnee-des-algorithmes-et-des-codes-sources).
+
+---
+
+### Identifier les besoins pour documenter utile
+
+.pull-left[
+
+Exemple : [les travaux sur la qualité des données de la Fing](https://docs.google.com/document/d/1jHOI6y00AhFCxy2tW4niBxaEORWZOdaV9K9YHaqNtsc/edit#)
+]
+
+.pull-right[
+![](./img/fing_documentation.png)
+]
+
+---
+
+### Permettre la conversation
+
+---
+
+### La méthode [Datasheet for datasets](https://arxiv.org/abs/1803.09010)
+
+![](./img/datasheetfordatasets.png)
+
+---
+
+background-image: url("https://media.giphy.com/media/6pnhed4tm1WyPfuEed/giphy.gif")
+class: center, top, inverse
+
+# Conclusion
+
+## Et si nous devions reprendre l'exercice du début ?
+
+---
+
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [sylvain@datactivist.coop](mailto:sylvain@datactivist.coop) ou [@sylvainlapoix](https://twitter.com/sylvainlapoix) sur Twitter
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"highlightSpans": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
