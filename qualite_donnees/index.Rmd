@@ -14,6 +14,7 @@ output:
       countIncrementalSlides: false
 params:
   event: Webinaire Ouvrir ma ville - Qualité des données
+  serie: futurocite_ouvrir-ma-ville
   slug: qualite_donnees
   
 ---
@@ -43,9 +44,9 @@ layout: true
 
 class: center, middle
 
-Ces slides en ligne : `r paste0("http://datactivist.coop/", params$slug)`
+Ces slides en ligne : `r paste0("http://datactivist.coop/", params$serie, "/", params$slug)`
 
-Sources : `r paste0("https://github.com/datactivist/", params$slug)`
+Sources : `r paste0("https://github.com/datactivist/", params$serie, "/", params$slug)`
 
 
 Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).

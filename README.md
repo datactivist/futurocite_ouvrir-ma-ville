@@ -14,9 +14,9 @@
 ### Mardi 19 janvier 2021 de 09h30 à 11 heures :<br>*trois histoires de l'open data local*
 * **Intervenant** : [Sylvain Lapoix (Datactivist)](http://twitter.com/sylvainlapoix)
 * **Lieu** : sur [Zoom](https://zoom.us/j/98930345295) aussi !
-* **Support** : - à venir -
+* **Support** :[Trois histoires<br>de l'open data local](https://datactivist.coop/futurocite_ouvrir-ma-ville/trois_histoires_opendatalocal)
 
-### Mercredi 3 février 2021 de 10h30 à 12 heures :<br>*datavisualisation et communication avec les habitant·es*
+### Mercredi 3 février 2021 de 10h30 à 12 heures :<br>*dataviz : communiquer par les chiffres*
 * **Intervenant** : encore [Sylvain Lapoix (Datactivist)](http://twitter.com/sylvainlapoix) !
 * **Lieu** : sur Gather.town cette fois-ci (instance en cours de construction) / en parallèle du hackathon [Hack your city](http://www.futurocite.be/hack-your-city/) ;
-* **Support** : - à venir -
+* **Support** : [Dataviz : communiquer par les chiffres"](https://datactivist.coop/futurocite_ouvrir-ma-ville/dataviz)
