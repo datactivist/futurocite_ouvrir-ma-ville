@@ -2,7 +2,7 @@
 title: "Trois histoires<br>de l'open data local"
 subtitle: "Webinaire 'Ouvrir ma ville' saison 2"
 author: "Sylvain Lapoix, Datactivist"
-date: "19/01/2021"
+date: "09/11/2021"
 output:
   SlidesDatactivist::moon_reader:
     css: [default, datactivist, datactivist-fonts]
@@ -174,15 +174,21 @@ David Berthiaud, directeur de la transformation numérique de la ville, conclut 
 
 ### Un peu de documentation
 
-* [le menu des cantines scolaires](https://opendata.larochelle.fr/dataset/restauration-enfance-archives-des-menus-des-restaurants-scolaires/) sur l'open data de La Rochelle ;
-* [la réutilisation par l'application Quiditmiam](https://opendata.larochelle.fr/utilisation-des-jeux-de-donnees-menus-par-quiditmiam/).
+* [le menu des cantines scolaires](https://opendata.agglo-larochelle.fr/visualisation/information/?id=79f82500-13a3-45a8-8907-504112ee67f0&disjunctive.plat_ordre&disjunctive.plat_semaine&disjunctive.plat_type&disjunctive.plat_id&disjunctive.plat_age&dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6Im1lbnVzX2Rlc19yZXN0YXVyYW50c19zY29sYWlyZXMiLCJvcHRpb25zIjp7ImlkIjoiNzlmODI1MDAtMTNhMy00NWE4LTg5MDctNTA0MTEyZWU2N2YwIiwiZGlzanVuY3RpdmUucGxhdF9vcmRyZSI6dHJ1ZSwiZGlzanVuY3RpdmUucGxhdF9zZW1haW5lIjp0cnVlLCJkaXNqdW5jdGl2ZS5wbGF0X3R5cGUiOnRydWUsImRpc2p1bmN0aXZlLnBsYXRfaWQiOnRydWUsImRpc2p1bmN0aXZlLnBsYXRfYWdlIjp0cnVlfX0sImNoYXJ0cyI6W3siYWxpZ25Nb250aCI6dHJ1ZSwidHlwZSI6ImxpbmUiLCJmdW5jIjoiQVZHIiwieUF4aXMiOiJwbGF0X29yZHJlIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWUsImNvbG9yIjoiIzY2YzJhNSJ9XSwieEF4aXMiOiJwbGF0X2RhdGUiLCJtYXhwb2ludHMiOiIiLCJ0aW1lc2NhbGUiOiJ5ZWFyIiwic29ydCI6IiJ9XSwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D) sur l'open data de La Rochelle ;
+* [la réutilisation par l'application Quiditmiam](https://quiditmiam.fr/).
+
+---
+
+### Bonus : les menus de Chaudfontaine
+
+![](./img/menus_chaudfontaine.png)
 
 ---
 
 background-image: url("https://media.giphy.com/media/Q8vZZ6kGS1VFm/giphy.gif")
 class: center, top, inverse
 
-## Histoire #2 : Du formulaire PDF à la carte ouvertes
+## Histoire #2 : Du formulaire PDF à la carte ouverte
 
 
 ---
@@ -387,6 +393,13 @@ class: center, top, inverse
 Jean-Marie Bourgogne, délégué général d'Open Data France y voit un signe de *"résilience productive"* :
 
 > *"Pour résister à la crise, il faut parfois se tourner vers de plus petits acteurs agiles et ne pas attendre les structures nationales ou étatiques."*
+
+---
+
+### Bonus : [Powalco](http://www.powalco.be/), un trésor à ouvrir ?
+
+![](./img/powalco.png)
+
 
 ---
 
