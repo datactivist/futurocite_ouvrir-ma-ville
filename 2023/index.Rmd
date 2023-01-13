@@ -20,7 +20,7 @@ output:
     anchor_sections: false
 params:
   event: Ouvrir ma Ville avancé
-  slug: futurocite
+  slug: futurocite_ouvrir-ma-ville/2023
   description: Premier atelier avancé du programme FuturoCité Ouvrir ma Ville
   title: Enjeux de la standardisation des données ouvertes
   image: https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png
