@@ -2,7 +2,6 @@
 
 ![](./img/futurocite_logo_small.jpg)
 
-
 ## Webinaires : saison 2
 
 ### *Documenter et améliorer la qualité des données*<br>
@@ -22,3 +21,29 @@
 * **Lieu** : sur [Zoom](https://zoom.us/j/98930345295) aussi !
 * **Support** :[Trois histoires de l'open data local](https://datactivist.coop/futurocite_ouvrir-ma-ville/trois_histoires_opendatalocal) ;
 * **Dernière mise à jour** : Mardi 9 novembre 2021.
+
+## Webinaires avancés : saison 2023
+
+### *Les enjeux de la standardisation et diagnostics*<br>
+* **Intervenant** : Sarah Bourgouin et Elise Ho-Pun-Cheung (Datactivist)
+* **Lieu** : sur Zoom
+* **Support** : [Les enjeux de la standardisation et diagnostics](https://datactivist.coop/futurocite_ouvrir-ma-ville/2023/#1) ;
+* **Dernière mise à jour** : 13/01/2023.
+
+### *Production d’un jeu de données standardisé*<br>
+* **Intervenant** : Sarah Bourgouin et Elise Ho-Pun-Cheung (Datactivist)
+* **Lieu** : sur Zoom ;
+* **Support** : [Production d’un jeu de données standardisé](tbd) ;
+* **Dernière mise à jour** : 13/01/2023.
+
+### *Valider, corriger et publier son jeu de données*<br>
+* **Intervenant** : Sarah Bourgouin et Elise Ho-Pun-Cheung (Datactivist)
+* **Lieu** : sur Zoom
+* **Support** :[Valider, corriger et publier son jeu de données](tdb) ;
+* **Dernière mise à jour** : 13/01/2023.
+
+### *Documenter ses jeux des données*<br>
+* **Intervenant** : Sarah Bourgouin et Elise Ho-Pun-Cheung (Datactivist)
+* **Lieu** : sur Zoom
+* **Support** :[Documenter ses jeux des données](tdb) ;
+* **Dernière mise à jour** : 13/01/2023.
