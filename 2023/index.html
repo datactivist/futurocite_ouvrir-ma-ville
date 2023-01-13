@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>Les enjeux de la standardisation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Sarah Bourgouin &amp; Elise Ho-Pun-Cheung, Datactivist" />
+    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/datactivist-fonts.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, orientation=auto"/>
+    <meta name="description" content="Ouvrir ma Ville avancé"/>
+    <meta name="github-repo" content="datactivist/futurocite"/>
+    <meta name="twitter:title" content="Enjeux de la standardisation des données ouvertes"/>
+    <meta name="twitter:description" content="Ouvrir ma Ville avancé"/>
+    <meta name="twitter:url" content="https://datactivist.coop/futurocite"/>
+    <meta name="twitter:image" content="https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png"/>
+    <meta name="twitter:image:alt" content="le logo de Datactivist"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:creator" content="@datactivi_st"/>
+    <meta name="twitter:site" content="@datactivi_st"/>
+    <meta property="og:title" content="Enjeux de la standardisation des données ouvertes"/>
+    <meta property="og:description" content="Ouvrir ma Ville avancé"/>
+    <meta property="og:url" content="https://datactivist.coop/futurocite"/>
+    <meta property="og:image" content="https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/logo.png"/>
+    <meta property="og:image:alt" content="le logo de Datactivist"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="fr_FR"/>
+    <meta property="og:site_name" content="Datactivist"/>
+    <meta property="article:author" content="Datactivist"/>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Les enjeux de la standardisation
+### Sarah Bourgouin &amp; Elise Ho-Pun-Cheung, Datactivist
+### Ouvrir ma ville, 2023-01-13
+
+---
+
+
+
+
+layout: true
+
+&lt;style&gt;
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: #e95459;
+}
+
+&lt;/style&gt;
+
+
+&lt;div class='my-footer'&gt;&lt;span&gt;Ouvrir ma Ville avancé&lt;/span&gt; &lt;center&gt;&lt;div class=logo&gt;&lt;a href='https://datactivist.coop/'&gt;&lt;img src='https://github.com/datactivist/slides_datactivist/raw/master/inst/rmarkdown/templates/xaringan/resources/img/fond_noir_monochrome.png' width='100px'&gt;&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;&lt;/span&gt;&lt;/div&gt; 
+
+
+---
+
+class: center, middle
+
+Ces slides en ligne : http://datactivist.coop/futurocite
+
+Sources : https://github.com/datactivist/futurocite
+
+
+Les productions de Datactivist sont librement réutilisables selon les termes de la licence [Creative Commons 4.0 BY-SA](https://creativecommons.org/licenses/by-sa/4.0/legalcode.fr).
+
+&lt;BR&gt;
+&lt;BR&gt;
+
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png)
+
+
+---
+
+## Qui sommes nous ?
+
+
+.reduite.center[
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/team.jpg)
+]
+---
+## Qui sommes nous ?
+
+- Datactivist est un .red[**pure player de l’open data**] créé en 2016, par Samuel Goëta et Joël Gombin.
+
+- Se positionnant sur .red[**toutes les étapes du travail d’ouverture des données**], Datactivist travaille tant avec les producteurs de données qu’avec les réutilisateurs et participe à l’appropriation des données par chacun.
+
+- Nous appliquons nos propres .red[**valeurs**] : nous sommes une coopérative ; nos supports de formation et nos contenus sont librement réutilisables, publiés en licence Creative Commons.
+
+- Une approche issue de la recherche : voir notamment **https://datactivist.coop/these**. 
+
+- Nous animons la communauté [#TeamOpenData](https://teamopendata.org).
+
+---
+## Nos activités
+
+- Conseil sur les .red[**stratégies d’ouverture de données**] : nous aidons les organisations dans la conception et la mise en œuvre de leur stratégie d’ouverture de données.
+
+
+- .red[**Accompagnement dans la réutilisation de données ouvertes**] : nous aidons les organisations à utiliser les données au quotidien. 
+
+- .red[**Sensibilisation et formation à la donnée**] : nous formons à la culture générale des données, nous enseignons les grands principes et bonnes pratiques de l'open data et nous introduisons à la data science. 
+
+- .red[**Médiation de données**] : nous organisons des hackathons, des open data camps, des expéditions de données...
+
+---
+### A votre tour
+.center[
+**Qui êtes-vous ?**
+**Qu'attendez-vous de cette formation ?**
+&lt;br&gt;
+&lt;br&gt;
+![](https://datactivist.coop/aaf/img/pdr.png)
+]
+
+---
+### Les objectifs d'aujourd'hui 
+&lt;br&gt;
+.pull-left[
+* Echanger autour de vos pratiques l'ouverture des données 
+* Comprendre les principaux enjeux de la standardisation des données 
+* Entamer un diagnostic à partir de vos jeux de données 
+]
+
+.pull-right[
+![](https://datactivist.coop/aaf/img/openstand.png)
+]
+
+---
+class: inverse, center, middle
+
+## Les étapes de l'ouverture des données
+
+---
+### La data pipeline 
+.reduite.center[
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/logigramme.png)
+]
+---
+### Et chez vous ?  
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+.center[
+[Dites-nous tout sur Miro](https://miro.com/app/board/uXjVP0Eoxek=/)
+]
+
+---
+### Focus : le passage en CSV
+&lt;br&gt;
+&lt;br&gt;
+**Il n'y a pas de mauvaises données dans l'absolu mais il y a des mauvais CSV**  
+
+**Pour éviter quelques erreurs récurrentes, un petit rappel de 6 pratiques à bannir**
+
+.reduite.center[
+![](https://media4.giphy.com/media/njYrp176NQsHS/giphy.gif)
+]
+
+---
+
+### À ne pas faire n°1 : une première ligne qui ne correspond pas à un champ précis  
+
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/reglecsv1.png)
+
+
+---
+### À ne pas faire n°2 : mettre en forme les cellules
+&lt;br&gt;
+.center[
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/reglecsv2.png)
+] 
+
+---
+### À ne pas faire n°3 : insérer deux données de nature différente (ou deux objets) sur une même ligne
+&lt;br&gt;
+.center[
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/reglecsv3.png)
+] 
+
+---
+### À ne pas faire n°4 : fusionner des cellules
+&lt;br&gt;
+.center[
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/reglecsv4.png)
+] 
+
+---
+### À ne pas faire n°5 : séparer les tableaux dans des onglets différents ou dans une même feuille
+&lt;br&gt;
+.center[
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/reglecsv5.png)
+] 
+
+---
+### À ne pas faire n°6 : séparer les tableaux dans des onglets différents ou dans une même feuille
+&lt;br&gt;
+.center[
+![](https://datactivist.coop/oraccle/open_data_pipeline/img/reglecsv5.png)
+] 
+
+---
+
+### Un dernier conseil : utiliser la virgule comme séparateur 
+
+.center[**Comment faire depuis excel ?**
+]
+--
+.reduite.center[
+![](https://i.ibb.co/YyN0wx0/Capture-d-e-cran-2023-01-13-a-09-52-15.png)
+]
+
+---
+
+### Résoudre les principaux problèmes de qualité des données 
+
+.center[
+[Le guide de Quartz](https://github.com/laurence001/quartz-bad-data-guide-french)  ![](https://i.ibb.co/0rQVV3p/Capture-d-e-cran-2023-01-10-a-12-14-21.png)
+]
+
+---
+class: inverse, center, middle
+
+## La standardisation : pourquoi, comment ?  
+
+---
+### Standardisation ≠ qualité  
+&lt;br&gt;
+**Avant toute chose, gardons en tête que :** 
+
+* La standardisation est un des outils permettant une montée en qualité des données. Elle permet d'attendre une "qualité minimale" et de faciliter l'usage des données 
+
+--
+
+* Mais **une bonne donnée n'est pas "que" standardisée** : elle est aussi découvrable, documentée, mise à jour, enrichie par les retours des utilisateurs... 
+
+--
+
+* Et **une donnée non standardisée n'est pas forcément une mauvaise donnée !** 
+
+--
+
+* La qualité reste par ailleurs une appréciation : une donnée de moindre qualité pour une réutilisateur peut répondre aux usages d'un autre  
+
+---
+### Standard, schéma : de quoi parle-t-on ?   
+
+.pull-left[
+* Standard de données : une appelation générique désignant l'ensemble des préconisations qui permettent de produire des données standardisées  
+
+
+* Schéma de données : des conventions qui décrivent les champs et les valeurs admises dans un jeu de données standardisé (= un standard technique)
+]
+
+.reduite.pull-right[
+![](https://i.ibb.co/8gNBPy7/Capture-d-e-cran-2023-01-10-a-14-59-40.png)
+]
+
+---
+### Aux origines de la standardisation : un besoin de comparaison 
+
+* Notamment pour des **données statistiques** : dans la deuxième moitié du vingtième siècle, de nombreuses catégories statistiques ont été créées sous l’impulsion d’une dynamique de standardisation européenne, voire internationale 
+--
+
+* Mais pas que ! Dès sa création, en 1919, le Bureau international du travail (BIT) se donnait pour objectif de **standardiser les normes de travail et la statistique internationale** 
+
+--
+
+* Dans le monde de l’information géographique et environnementale : **la directive européenne INSPIRE (2007) **proposait ainsi des dispositions relatives à l’interopérabilité des données géographiques et environnementales passant par la standardisation des métadonnées et des données elles-mêmes 
+
+--
+
+* Aujourd'hui, **de nombreux standards de données ouvertes existent** aux niveaux international, européen, national, régional... [Y compris en Wallonie](http://www.futurocite.be/standardiser-les-donnees-ouvertes/) 
+
+---
+
+### Et de parler un langage commun !
+
+**→ Un besoin de sémantique partagée entre et au sein des administrations**
+--
+.pull-left[Un des problèmes de l'ouverture des données : **le vocabulary mismatch**
+.reduite[![](https://i.ibb.co/ZHf5fsF/Capture-d-e-cran-2023-01-13-a-10-23-53.png)]
+.reduite[![](https://i.ibb.co/3Ssc35C/Capture-d-e-cran-2023-01-13-a-10-23-47.png)]
+]
+--
+.pull-right[Une des solutions : **un dictionnaire commun**
+&lt;br&gt;
+.reduite[![](https://i.ibb.co/cw2GxXd/Capture-d-e-cran-2023-01-13-a-10-28-03.png)]
+]
+
+---
+### Les mots clefs : interopérabilité &amp; impact
+&lt;br&gt;
+&lt;br&gt;
+.reduite.center[
+![](https://media.giphy.com/media/ZFQJv9OPIjglamUFDj/giphy.gif)
+]
+---
+### Normaliser les standards eux-mêmes 
+
+Un standard doit s'appuyer sur des normes pour être robuste. Utiliser des référentiels partagés est un gage d'interopérabilité 
+--
+.pull-left[#### Exemple de l'enfer : les dates (illustration : [xkcd](https://xkcd.com/1179/))
+
+.reduite2[![](https://datactivist.coop/futurocite_ouvrir-ma-ville/qualite_donnees/img/xkcd_dates.png)]
+]
+--
+
+.pull-right[
+* Concrètement : pourquoi se priver d'un champ utilisable par tous ?  
+
+* Et jamais il n'existe pas de standard : je peux produire des données en utilisant autant que possible des normes partagées !
+]
+
+---
+### Un exemple : les standards liées à la mobilité 
+→ Des applications pour les usagers déployées à grande échelle (qui seraient trop coûteuses à développer localement) grâce à des standards de données 
+
+.pull-left[Le [GTFS](https://developers.google.com/transit) de Google
+.reduite[![](https://datactivist.coop/futurocite_ouvrir-ma-ville/qualite_donnees/img/gtfs.png)]
+]
+
+.pull-right[NeTEx et ses divers [profils](https://doc.transport.data.gouv.fr/documentation/normes-europeennes/accessibilite)
+.reduite[![](https://i.ibb.co/CsXRsW4/Capture-d-e-cran-2023-01-13-a-10-49-34.png)
+]
+]
+---
+
+### Un autre exemple : les données des dépenses publiques 
+
+→ Des standards nationaux et internationaux permettent de suivre la vie d'un marché publics, ou encore des subventions 
+
+.pull-left[[L'International Aid Transparency Initiative - IATI](https://iatistandard.org/en/iati-standard/)
+.reduite[![](https://cdn.iatistandard.org/prod-iati-website/images/madagascar_casestudy_chart.width-630.format-webp.webp)]
+Données relatives aux engagements de dépenses publiées au titre de l’IITA ou dans la plateforme AMP-Madagascar (2009 à 2018)
+]
+
+.pull-right[L'Open Contracting Data Standard -[ OCDS](https://doc.transport.data.gouv.fr/documentation/normes-europeennes/accessibilite)
+.reduite[![](https://i.ibb.co/v4KfH6r/Capture-d-e-cran-2023-01-13-a-10-54-20.png)
+]
+]
+---
+### Un dernier exemple (qui sauve des vies) : le [DAE](https://schema.data.gouv.fr/arsante/schema-dae/latest.html)
+.center[
+![](https://datactivist.coop/futurocite_ouvrir-ma-ville/qualite_donnees/img/schema_dae.png)
+]
+
+---
+### Quelques principes de la conception de standards 
+
+.reduite.pull-left[
+![](https://i.ibb.co/k2H0jyB/Capture-d-e-cran-2023-01-13-a-13-26-27.png)
+]
+
+.pull-right[
+Quelques recommandations pour la phase de concertation (plus [ici](https://observatoire.data-publica.eu/nos-publications)) :
+* Constituer un groupe aux profils et expériences variées 
+* S’assurer de la représentation des producteurs et des réutilisateurs 
+* Clarifier les usages attendus 
+* Faire un bilan des données existantes et des contraintes des producteurs
+* Penser le parcours de la donnée avec les producteurs
+* Penser l’évolution du standard en collaboration avec la communauté
+* ...
+]
+
+---
+### En bref : Pourquoi standardiser mes données ? 
+
+- **Répondre aux attentes des usagers** : un "bon" standard répond à des cas d'usage  
+
+--
+&lt;br&gt;
+- **Faciliter la création de nouveaux usages au-delà de mon seul territoire** : vos données contribuent à l'information et à l'activité sur votre territoire et au-delà, avec des bénéfices sociaux et économiques nombreux  
+
+--
+&lt;br&gt;
+- **Faire moins de SAV** : standardiser ses données est plus efficace que compenser les insuffisances des jeux de données au départ  
+
+---
+### Un exemple : standardiser des données pour faciliter la compréhension des données en interne 
+
+.center[Comme l'a constaté l'équipe de la ville d'Issy-les-Moulineaux (région parisienne) avant d'opter pour un schéma de qualité de données : ]
+&lt;br&gt;
+*"Problème : ces tableaux et rapports sont dans des structurations et des formats différents selon les services. Chaque année, les indicateurs sont à recalculer, les données doivent alimenter d’autres tableaux, et donc le travail de mise à jour prend du temps."*
+
+.reduite.center[![](https://datactivist.coop/futurocite_ouvrir-ma-ville/qualite_donnees/img/standardisation_issy.png)]
+
+---
+### Et si mes données sont plus exhaustives qu'un standard ? 
+
+.reduite.center[
+![](https://media2.giphy.com/media/q2D5lSYzwnP4LbSPhF/giphy.gif)
+]  
+
+* On peut se conformer à un standard et aller plus loin, en gardant des champs en plus 
+* Ce qu'on ne peut pas faire : ajouter des valeurs aux listes contraintes 
+
+---
+### Votre mission : vous appropriez les 5 standards prioritaires publiés par FuturoCité 
+
+L'objectif est d'aboutir à la publication d'un jeu de données (en CSV) 
+
+.reduite.center[
+![](https://i.ibb.co/3kbFw2W/Capture-d-e-cran-2023-01-13-a-13-49-37.png)
+]
+
+---
+
+class: inverse, center, middle
+
+## A vos jeux de données   
+
+---
+### Atelier diagnostic 
+  
+  &lt;br&gt;
+.center[**L'objectif : faire correspondre les champs d'un schéma et ceux de votre jeux de données**
+&lt;br&gt;
+&lt;br&gt;
+[Les supports par ici](https://drive.google.com/drive/folders/1Ic7ZXD7t2aWl2x1x0ZklF_njplU2HVfL)
+]
+
+---
+
+class: inverse, center, middle
+
+# Merci !
+
+Contact : [sarah@datactivist.coop](mailto:sarah@datactivist.coop)
+&lt;br&gt;
+[elise@datactivist.coop](mailto:elise@datactivist.coop)
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script src="matomo.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
