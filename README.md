@@ -27,7 +27,7 @@
 ### *Les enjeux de la standardisation et diagnostics*<br>
 * **Intervenant** : Sarah Bourgouin et Elise Ho-Pun-Cheung (Datactivist)
 * **Lieu** : sur Zoom
-* **Support** : [Les enjeux de la standardisation et diagnostics](https://datactivist.coop/futurocite_ouvrir-ma-ville/2023/#1) ;
+* **Support** : [Les enjeux de la standardisation et diagnostics](https://datactivist.coop/futurocite_ouvrir-ma-ville/2023/enjeux-standardisation) ;
 * **Dernière mise à jour** : 13/01/2023.
 
 ### *Production d’un jeu de données standardisé*<br>
