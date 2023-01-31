@@ -34,7 +34,7 @@
 * **Intervenant** : Sarah Bourgouin et Elise Ho-Pun-Cheung (Datactivist)
 * **Lieu** : sur Zoom ;
 * **Support** : [Production d’un jeu de données standardisé](https://datactivist.coop/futurocite_ouvrir-ma-ville/2023/Production-jeu-donnees-standardise/#1) ;
-* **Dernière mise à jour** : 13/01/2023.
+* **Dernière mise à jour** : 31/01/2023.
 
 ### *Valider, corriger et publier son jeu de données*<br>
 * **Intervenant** : Sarah Bourgouin et Elise Ho-Pun-Cheung (Datactivist)
